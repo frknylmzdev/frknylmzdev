@@ -12,48 +12,51 @@
 
 <div align="center">
   
-  javascript
-  class Developer {
-    constructor() {
-      this.name = "Furkan Yılmaz";
-      this.role = "Full Stack Developer";
-      this.languages = ["JavaScript", "Python", "C#"];
-      this.skills = ["Web", "Mobile", "Backend"];
-      this.level = 1;
-      this.xp = 0;
-      this.quests = ["Build E-Commerce", "Create Mobile App", "Design API"];
-      this.achievements = [];
-    }
-    
-    levelUp() {
-      this.level++;
-      console.log(`Level up! Now at level ${this.level}`);
-      this.unlockAchievement("Level Up!");
-      return this.level;
-    }
-    
-    completeQuest(questName) {
-      this.xp += 50;
-      console.log(`Completed quest: ${questName}! +50 XP`);
-      this.unlockAchievement(`Quest Complete: ${questName}`);
-      if (this.xp >= 100) this.levelUp();
-      return this.xp;
-    }
-    
-    unlockAchievement(name) {
-      this.achievements.push(name);
-      console.log(`🏆 Achievement unlocked: ${name}`);
-    }
-    
-    startNewAdventure() {
-      return new Promise((resolve) => {
-        resolve("Harika bir proje geliştirmeye hazırım!");
-      });
-    }
+  ## 👨‍💻 Developer Sınıfı (JavaScript)
+
+```js
+class Developer {
+  constructor()  {
+    this.name = "Furkan Yılmaz";
+    this.role = "Full Stack Developer";
+    this.languages = ["JavaScript", "Python", "C#"];
+    this.skills = ["Web", "Mobile", "Backend"];
+    this.level = 1;
+    this.xp = 0;
+    this.quests = ["Build E-Commerce", "Create Mobile App", "Design API"];
+    this.achievements = [];
   }
-  
-  const furkan = new Developer();
-  furkan.startNewAdventure().then(console.log);
+
+  levelUp() {
+    this.level++;
+    console.log(`Level up! Now at level ${this.level}`);
+    this.unlockAchievement("Level Up!");
+    return this.level;
+  }
+
+  completeQuest(questName) {
+    this.xp += 50;
+    console.log(`✅ Completed quest: ${questName}! +50 XP`);
+    this.unlockAchievement(`Quest Complete: ${questName}`);
+    if (this.xp >= 100) this.levelUp();
+    return this.xp;
+  }
+
+  unlockAchievement(name) {
+    this.achievements.push(name);
+    console.log(`🏆 Achievement unlocked: ${name}`);
+  }
+
+  startNewAdventure() {
+    return new Promise((resolve) => {
+      resolve("🚀 Harika bir proje geliştirmeye hazırım!");
+    });
+  }
+}
+
+const furkan = new Developer();
+furkan.startNewAdventure().then(console.log);
+
   
   
   <details>
