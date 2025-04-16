@@ -12,7 +12,7 @@
 
 <div align="center">
   
-  ```javascript
+  javascript
   class Developer {
     constructor() {
       this.name = "Furkan Yılmaz";
@@ -54,7 +54,7 @@
   
   const furkan = new Developer();
   furkan.startNewAdventure().then(console.log);
-  ```
+  
   
   <details>
   <summary>🎲 Click to play the Developer RPG!</summary>
